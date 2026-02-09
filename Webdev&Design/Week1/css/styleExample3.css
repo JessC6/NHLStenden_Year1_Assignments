@@ -1,0 +1,26 @@
+/* Styling of the headers, centralizing them to the page */
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: red;
+}
+
+/* Styling of a margin for the beginning of each paragraph */
+p {
+    text-indent: 10px;
+}
+
+/* Creation and styling of a border around all images */
+img {
+    border: 2px solid blue;
+}
+
+/* Styling of the independent divs by center them to the page without the
+creation of the faulty blank spaces into linkable zones */
+/* This is better practice since I was trying to do this before by center images
+and pragraphs which created unnecessary clickable white spaces! */
+.imgContainers {
+    margin: 0 auto;
+}

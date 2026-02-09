@@ -1,0 +1,12 @@
+/*Styling the main header*/
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: red;
+}
+
+p {
+    text-indent: 10px;
+}

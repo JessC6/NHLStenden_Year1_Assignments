@@ -1,0 +1,10 @@
+/* Styling of the Headers */
+h2 {
+    color: red;
+}
+
+/* Centralizing the texts and images therefore the whole body,
+no div because I want to leave it simple, but is better practice!
+body {
+    text-align: center;
+}*/
