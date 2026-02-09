@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+       $string = "Mr. Van Winteren, 33 years old, has been collecting special objects for the past 4 years. Van Winteren
+       currently has 33 cars, 37 horses and 29 rare musical instruments. The rarest instrument in Van Winteren's
+       possession is a 132-year-old guitar. His favorite horse is Bensley, the 8 year old stallion.";
+
+       $modified_string = preg_replace("/\d+/", "<b>$0</b>", $string);
+
+       // Or better version to prevent the italization of the setences starters
+       $names = ["Van", "Winteren", "Bensley"];
+       $names_pattern = '/\b(' . implode('|', $names) . ')\b/';
+
+       $modified_string = preg_replace($names_pattern, '<i>$0</i>', $modified_string);
+
+       // 1º - I'll create an array with the objects present on the string I want to modify
+       // 2º - Grab all matches glued by the OR statement (|) to ensure that if the matches are found, all changes are made
+       // 3º - Use the same method as before
+       $objects = ["cars", "horses", "rare musical instruments", "guitar"];
+       $pattern = '/\b(' . implode('|', $objects) . ')\b/';
+
+       $modified_string = preg_replace($pattern, '<u>$1</u>', $modified_string);
+
+       echo $modified_string;
+    ?>
+</body>
+</html>
