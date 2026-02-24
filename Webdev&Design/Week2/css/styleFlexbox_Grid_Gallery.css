@@ -1,0 +1,24 @@
+.flexbox_items {
+    display: flex;
+}
+
+.flexbox_items > div {
+    background-color: #f1f1f1;
+    width: 150px;
+    height: 150px;
+    margin: 10px; 
+    text-align: center;
+    line-height: 150px;
+    font-size: 20px;
+}
+
+.gridbox_Items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.gridbox_Items > div {
+    background-color: #f1f1f1;
+}
